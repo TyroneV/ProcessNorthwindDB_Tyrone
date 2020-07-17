@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 
 
@@ -6,10 +7,17 @@ namespace ProcessNorthwindDB_Tyrone
 {
     class Program
     {
+        private static string dataSource = 
+            ConfigurationManager.AppSettings.Get("DataSource");
+        private static string fileName = 
+            ConfigurationManager.AppSettings.Get("AttachDbFilename");
+        private static string integratedSecurity = 
+            ConfigurationManager.AppSettings.Get("IntegratedSecurity");
+
         private static SqlConnection sqlConnection = new
-            SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;" +
-            "AttachDbFilename=c:\\databases\\northwnd.mdf;" +
-            "Integrated Security=True");
+            SqlConnection($"Data Source={dataSource};" +
+            $"AttachDbFilename={fileName};" +
+            $"Integrated Security={integratedSecurity}");
 
         private static void OpenConnection()
         {
@@ -35,7 +43,6 @@ namespace ProcessNorthwindDB_Tyrone
             Console.WriteLine("\n");
             Console.WriteLine("Display Rows Before Insertion:");
             dml.SelectRows(sqlConnection);
-            /*
             Console.WriteLine("\n");
             Console.WriteLine("Insert Row operation:***");
             dml.InsertRows(sqlConnection);
@@ -55,7 +62,6 @@ namespace ProcessNorthwindDB_Tyrone
             Console.WriteLine("\n");
             Console.WriteLine("Clean Up By Deleting Inserted Rows***");
             dml.DeleteRows(sqlConnection);
-            */
             Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
         }
