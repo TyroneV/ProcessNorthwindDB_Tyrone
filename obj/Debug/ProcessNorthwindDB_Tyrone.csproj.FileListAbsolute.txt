@@ -1,0 +1,7 @@
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\bin\Debug\ProcessNorthwindDB_Tyrone.exe.config
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\bin\Debug\ProcessNorthwindDB_Tyrone.exe
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\bin\Debug\ProcessNorthwindDB_Tyrone.pdb
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\obj\Debug\ProcessNorthwindDB_Tyrone.csprojAssemblyReference.cache
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\obj\Debug\ProcessNorthwindDB_Tyrone.csproj.CoreCompileInputs.cache
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\obj\Debug\ProcessNorthwindDB_Tyrone.exe
+C:\Users\ZeroR\source\repos\ProcessNorthwindDB_Tyrone\obj\Debug\ProcessNorthwindDB_Tyrone.pdb
