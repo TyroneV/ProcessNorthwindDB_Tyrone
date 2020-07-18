@@ -31,6 +31,7 @@ namespace ProcessNorthwindDB_Tyrone
                 Console.WriteLine("Error: " + ex.ToString());
             }
         }
+
         public void DeleteRows(SqlConnection sqlConnection)
         {
             try
@@ -41,7 +42,7 @@ namespace ProcessNorthwindDB_Tyrone
                     // Execute Scalar Query
                     Console.WriteLine("Before Delete, Number of Employees = {0}", scalarCommand.ExecuteScalar());
                     // Set up and execute DELETE Command
-                    //Create Command object
+                    // Create Command object
                     using (SqlCommand nonqueryCommand = sqlConnection.CreateCommand())
                     {
                         nonqueryCommand.CommandText = "DELETE FROM Employees WHERE " + "(FirstName='Annabelle' AND LastName='Jahlberg') OR " +
@@ -60,6 +61,7 @@ namespace ProcessNorthwindDB_Tyrone
                 Console.WriteLine("Error: " + ex.ToString());
             }
         }
+
         public void SelectRows(SqlConnection sqlConnection)
         {
             try
@@ -94,6 +96,7 @@ namespace ProcessNorthwindDB_Tyrone
             }
 
         }
+
         public void InsertRows(SqlConnection sqlConnection)
         {
             //Insert Rows processing

@@ -6,6 +6,7 @@ namespace ProcessNorthwindDB_Tyrone
 {
     class Program
     {
+        // Gets connection string data from the config
         private static string dataSource = 
             ConfigurationManager.AppSettings.Get("DataSource");
         private static string fileName = 
@@ -65,7 +66,7 @@ namespace ProcessNorthwindDB_Tyrone
                 Console.WriteLine("\n");
                 Console.WriteLine("Display Rows After Cleanup:");
                 dml.SelectRows(sqlConnection); 
-                // Close Connection
+                //Close Connection
                 sqlConnection.Close();
                 Console.WriteLine("Connection Closed");
                 Console.WriteLine("\nPress <ENTER> to quit...");
