@@ -43,29 +43,36 @@ namespace ProcessNorthwindDB_Tyrone
                 Console.WriteLine("\n");
                 Console.WriteLine("Display Rows Before Insertion:");
                 dml.SelectRows(sqlConnection);
+
                 Console.WriteLine("\n");
                 Console.WriteLine("Insert Row operation:***");
                 dml.InsertRows(sqlConnection);
+
                 //Display Rows Before Insertion
                 Console.WriteLine("\n");
                 Console.WriteLine("Display Rows After Insertion:");
                 dml.SelectRows(sqlConnection);
+
                 //Update Rows
                 Console.WriteLine("\n");
                 Console.WriteLine("Perform Update***");
                 dml.UpdateRows(sqlConnection);
+
                 //Display Rows Before Insertion
                 Console.WriteLine("\n");
                 Console.WriteLine("Display Rows After Update:");
                 dml.SelectRows(sqlConnection);
+
                 //Clean up with delete of all inserted rows
                 Console.WriteLine("\n");
                 Console.WriteLine("Clean Up By Deleting Inserted Rows***");
                 dml.DeleteRows(sqlConnection);
+
                 //Display Rows After Cleanup
                 Console.WriteLine("\n");
                 Console.WriteLine("Display Rows After Cleanup:");
                 dml.SelectRows(sqlConnection); 
+
                 //Close Connection
                 sqlConnection.Close();
                 Console.WriteLine("Connection Closed");
